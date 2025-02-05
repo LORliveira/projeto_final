@@ -1,11 +1,11 @@
 
-from flask import Flask, send_from_directory
+from flask import Flask, Fla
 
 app = Flask(__name__)
 
 @app.route('/')
 def serve_frontend():
-    return send_from_directory('../frontend/build', 'index.html')
+    return Fla('../frontend/build', 'index.html')
 
 @app.route('/api')
 def api_endpoint():
