@@ -2,7 +2,7 @@ import json
 import uuid
 import os
 from flask import session
-from aplicação.modelos.user_account import UserAccount
+from backend.app.modelos.user_account import UserAccount
 
 class DataRecord:
     def __init__(self):

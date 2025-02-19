@@ -1,7 +1,7 @@
 from flask import Flask
-from config import config
+from backend.app.config import config
 
 app = Flask(__name__)
 app.config.from_object(config) # Isso carrega as configurações que coloquei no config.py
 
-from aplicação.controladores import rotas
+from backend.app.controladores import rotas

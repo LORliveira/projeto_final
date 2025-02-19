@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>.::Bem-vindo::.</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/helper.css') }}">
+    <script src="{{ url_for('static', filename='js/helper.js') }}"></script>
+</head>
+<body>
+    <div class="object_centered">
+        <h1>Seja bem-vindo ao BMVC! (Flask Powered)</h1>
+        <h4>Estrutura desenvolvida para oferecer suporte ao desenvolvimento FullStack da disciplina de Orientação a Objetos.</h4>
+        <img src="{{ url_for('static', filename='img/BottleLogo.png') }}" alt="Descrição da Imagem" width="300" height="300" onclick="displayText()">
+        <h4>H.G.M.</h4>
+    </div>
+</body>
+</html>

@@ -1,13 +1,9 @@
-
 from flask import render_template, redirect, request, session, url_for
-from app import app
-from controladores.DataRecord import DataRecord
+from backend.app import app
+from backend.app.controladores.DataRecord import DataRecord
 
 ctl = DataRecord() # Não esquecer de fazer o data record que o controlador de dados
 
-@app.route('index')
-def serve_frontend():
-    return ('../frontend/build', 'index.html')
 
 @app.route('/')
 def index():
