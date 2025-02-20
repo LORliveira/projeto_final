@@ -16,6 +16,13 @@
 
         <input value="Login" type="submit" />
     </form>
+
+    <!-- Botão para se registrar -->
+    <form action="{{ url_for('registrar') }}" method="get">
+        <button type="submit">Registrar</button>
+    </form>
+
+    <!-- Botão de logout -->
     <form action="{{ url_for('logout') }}" method="post">
         <button type="submit">Logout</button>
     </form>

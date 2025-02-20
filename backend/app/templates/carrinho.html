@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>E-Commerce</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+<body>
+{% extends "base.html" %}
+{% block content %}
+<h2>Seu Carrinho</h2>
+<a href="/" class="btn btn-secondary mb-3">Voltar para Produtos</a>
+<ul class="list-group mb-4">
+    {% for produto in carrinho.listProd %}
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+        {{ produto.nome }} - R$ {{ "%.2f"|format(produto.preco) }}
+        <a href="/rem_carrinho/{{ produto.nome }}" class="badge badge-danger">Remover</a>
+    </li>
+    {% endfor %}
+</ul>
+<a href="/finalizar" class="btn btn-success">Finalizar Compra</a>
+{% endblock %}

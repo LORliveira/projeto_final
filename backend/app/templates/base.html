@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Useless Express</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+<body>
+    <header class="header">
+        <a class="logo" href="/">
+            <img src="{{ url_for('static', filename='./img/logo.png') }}" alt="Logo">
+        </a>
+
+        <div class="search-bar">
+            <img src="{{ url_for('static', filename='./img/search.png') }}" alt="Buscar">
+            <input type="text" class="pesquisar" placeholder="Pesquisar...">
+        </div>
+
+        <a class="cart-button" href="/carrinho">
+        <img src="{{ url_for('static', filename='./img/cart.png') }}" alt="Carrinho" class="logocart">
+            Carrinho</a>
+
+        <img src="{{ url_for('static', filename='./img/more_vert.png') }}">
+    </header>
+    <nav class="navbar">
+
+        <input type="checkbox" id="check">
+        <label for="check">
+          <i class="fas fa-bars" id="btn"></i>
+          <i class="fas fa-times" id="cancel"></i>
+        </label>
+        <div class="sidebar">
+        <ul>
+         <li><a href="/sala"><i class="fas fa-home"></i>Sala</a></li>
+         <li><a href="/quarto"><i class="fas fa-bed"></i>Quarto</a></li>
+         <li><a href="/banheiro"><i class="fas fa-bath"></i>Banheiro</a></li>
+         <li><a href="/cozinha"><i class="fas fa-utensils"></i>Cozinha</a></li>
+        </ul>
+       </div>
+
+
+        <ul id="nav-menu">
+            <li><a href="/sala">Sala</a></li>
+            <li><a href="/quarto">Quarto</a></li>
+            <li><a href="/banheiro">Banheiro</a></li>
+            <li><a href="/cozinha">Cozinha</a></li>
+        </ul>
+    </nav>
+    <div class="bannerzinho">
+        <img class="iconebannerzinho"src="{{ url_for('static', filename='./img/relampagopowpow.png') }}">
+        <div class="textbannerzinho1">OFERTA RELAMPAGO!!!!!</div>
+        <div class="textbannerzinho2">PRODUTOS INUTEIS QUE VOCE AMA EM UM SÓ LUGAR!!!!</div>
+        <img class="iconebannerzinho"src="{{ url_for('static', filename='./img/relampagopowpow.png') }}">
+    </div>
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('nav-menu');
+            menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+        }
+    </script>
+    <div class="container mt-4">
+        {% block content %}{% endblock %}
+    </div>
+
+    <footer>
+        <div class="prefooter">
+            <h1>SEJA PARCEIRO DA USELESS EXPRESS</h1>
+        </div>
+        <p>&copy; 2025 - Todos os direitos reservados - Lucas/ Bryan</p>
+        <p>Entre em contato pelo e-mail: luc.o.rodrigues1405@gmail.com</p>
+        <nav>
+            <ul class="footer2">
+                <li ><a href="#" class="footer3">Termos de uso</a></li>
+                <li ><a href="#"class="footer3">Política de privacidade</a></li>
+                <li ><a href="#" class="footer3">Sobre nós</a></li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+</html>

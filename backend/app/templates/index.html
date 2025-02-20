@@ -1,9 +1,155 @@
 <!DOCTYPE html>
 <html>
+<head>
+    <title>E-Commerce</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
 <body>
+{% extends "base.html" %}
+{% block content %}
 
-<h1>aaaaaaaaaaaaaa</h1>
-<p>Testezasso</p>
+<div class="slideshow-container">
 
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 3</div>
+      <img src="{{ url_for('static', filename='./img/brancao.jpg') }}" style="width:100%">
+      <div class="text">Caption Text</div>
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 3</div>
+      <img src="{{ url_for('static', filename='./img/pretao.jpg') }}" style="width:100%">
+      <div class="text">Caption Two</div>
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 3</div>
+      <img src="{{ url_for('static', filename='./img/marromzao.jpg') }}" style="width:100%">
+      <div class="text">Caption Three</div>
+    </div>
+    
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+    
+    </div>
+    <br>
+    
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span> 
+      <span class="dot" onclick="currentSlide(2)"></span> 
+      <span class="dot" onclick="currentSlide(3)"></span> 
+    </div>
+    
+    <script>
+        let slideIndex = 1;
+        let slideInterval;
+        
+        function startSlideShow() {
+          slideInterval = setInterval(() => plusSlides(1), 8000);
+        }
+        
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          const slides = document.getElementsByClassName("mySlides");
+          const dots = document.getElementsByClassName("dot");
+          
+          if (n > slides.length) slideIndex = 1;
+          if (n < 1) slideIndex = slides.length;
+        
+          // Oculta todos os slides e remove a classe active
+          for (let slide of slides) {
+            slide.classList.remove("active");
+            slide.style.display = "none"; // Garante display: none após a transição
+          }
+        
+          // Remove a classe active dos dots
+          for (let dot of dots) {
+            dot.classList.remove("active");
+          }
+        
+          // Exibe o slide atual com transição
+          slides[slideIndex - 1].style.display = "block";
+          // Força um reflow para a transição de opacidade funcionar
+          void slides[slideIndex - 1].offsetWidth;
+          slides[slideIndex - 1].classList.add("active");
+          
+          // Atualiza o dot ativo
+          dots[slideIndex - 1].classList.add("active");
+        
+          // Reinicia o intervalo após interação manual
+          clearInterval(slideInterval);
+          startSlideShow();
+        }
+        
+        // Inicia o slideshow
+        showSlides(slideIndex);
+        </script>
+<center><h2>Produtos com Descontão</h2></center>
+<section class="section">
+<div class="row">
+    {% for produto in produtos %}
+            <div class="bloquinhos">
+                <h5 class="card-title">{{ produto.nome }}</h5>
+                <p class="">
+                    Preço: R$ {{ "%.2f"|format(produto.preco) }}<br>
+                    Categoria: {{ produto.categoria }}
+                </p>
+                <a href="/add_carrinho/{{ produto.nome }}" class="">Adicionar</a>
+            </div>
+ {% endfor %}
+<center><h2>Produtos Variados</h2></center>
+<section class="section">
+<div class="circulinho"></div>
+<div class="circulinho"></div>
+<div class="circulinho"></div>
+</section> 
+<section class="section">
+  <div class="circulinho"></div>
+  <div class="circulinho"></div>
+  <div class="circulinho"></div>
+  </section> 
+
+
+<section class="section2">
+<div class="bannerzinho2">
+  <div class="textbannerzinho2">Ultimas promoções!!!!!</div>
+  <div class="textbannerzinho2">Utilize o cupom iuzi10 para 10% de cashback</div>
+</div>
+
+</section class="section">
+<div class="bloquinhos"></div>
+<div class="bloquinhos"></div>
+<div class="bloquinhos"></div>
+<section>
+</section class="section">
+<div class="bloquinhos"></div>
+<div class="bloquinhos"></div>
+<div class="bloquinhos"></div>
+<section></section class="section">
+  <div class="bloquinhos"></div>
+  <div class="bloquinhos"></div>
+  <div class="bloquinhos"></div>
+  <section></section class="section">
+    <div class="bloquinhos"></div>
+    <div class="bloquinhos"></div>
+    <div class="bloquinhos"></div>
+    <section></section class="section">
+      <div class="bloquinhos"></div>
+      <div class="bloquinhos"></div>
+      <div class="bloquinhos"></div>
+      <section>
+
+</section>
+</div>
+
+{% endblock %}
 </body>
 </html>
