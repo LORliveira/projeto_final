@@ -30,10 +30,11 @@ def portal():
         session_id, username = ctl.authenticate_user(username, password)
         if session_id:
             session['session_id'] = session_id
-            return render_template(url_for('portal'))
+            return redirect(url_for('portal'))  # Redireciona para a rota 'portal'
         else:
-            return redirect(url_for('portal'))
-    return render_template('portal.html')
+            flash('Usuário ou senha incorretos.', 'error')
+            return redirect(url_for('portal'))  # Retorna pro portal
+    return render_template('portal.html')  
 
 @app.route('/logout', methods=['POST'])
 def logout():
