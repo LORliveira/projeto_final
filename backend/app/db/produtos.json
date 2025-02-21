@@ -1,0 +1,14 @@
+[
+    {
+        "nome": "Sofá Retrátil",
+        "preco": 2500.0,
+        "quantidade": 10,
+        "categoria": "Sala"
+    },
+    {
+        "nome": "Mesa de Centro",
+        "preco": 800.0,
+        "quantidade": 15,
+        "categoria": "Sala"
+    }
+]

@@ -1,0 +1,74 @@
+[
+    {
+        "nome": "Sof\u00e1 Retr\u00e1til",
+        "preco": 2500.0,
+        "quantidade": 10,
+        "categoria": "Sala"
+    },
+    {
+        "nome": "Mesa de Centro",
+        "preco": 800.0,
+        "quantidade": 15,
+        "categoria": "Sala"
+    },
+    {
+        "nome": "Cama Queen Size",
+        "preco": 3500.0,
+        "quantidade": 12,
+        "categoria": "Quarto"
+    },
+    {
+        "nome": "Sof\u00e1 Retr\u00e1til",
+        "preco": 2500.0,
+        "quantidade": 10,
+        "categoria": "Sala"
+    },
+    {
+        "nome": "Mesa de Centro",
+        "preco": 800.0,
+        "quantidade": 15,
+        "categoria": "Sala"
+    },
+    {
+        "nome": "Cama Queen Size",
+        "preco": 3500.0,
+        "quantidade": 12,
+        "categoria": "Quarto"
+    },
+    {
+        "nome": "Sof\u00e1 Retr\u00e1til",
+        "preco": 2500.0,
+        "quantidade": 10,
+        "categoria": "Sala"
+    },
+    {
+        "nome": "Mesa de Centro",
+        "preco": 800.0,
+        "quantidade": 15,
+        "categoria": "Sala"
+    },
+    {
+        "nome": "Cama Queen Size",
+        "preco": 3500.0,
+        "quantidade": 12,
+        "categoria": "Quarto"
+    },
+    {
+        "nome": "Sof\u00e1 Retr\u00e1til",
+        "preco": 2500.0,
+        "quantidade": 10,
+        "categoria": "Sala"
+    },
+    {
+        "nome": "Mesa de Centro",
+        "preco": 800.0,
+        "quantidade": 15,
+        "categoria": "Sala"
+    },
+    {
+        "nome": "Cama Queen Size",
+        "preco": 3500.0,
+        "quantidade": 12,
+        "categoria": "Quarto"
+    }
+]
